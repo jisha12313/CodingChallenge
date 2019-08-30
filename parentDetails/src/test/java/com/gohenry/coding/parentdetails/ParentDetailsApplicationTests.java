@@ -1,4 +1,4 @@
-package com.gohenry.coding.parentDetails;
+package com.gohenry.coding.parentdetails;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,9 +1,9 @@
-package com.gohenry.coding.parentDetails;
+package com.gohenry.coding.parentdetails;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication 
 public class ParentDetailsApplication {
 
 	public static void main(String[] args) {
