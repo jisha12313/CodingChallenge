@@ -20,14 +20,17 @@ public class ParentDataDto {
 
 	private String secondName;
 	
-	private List<ChildDto> childDtos;
+	
+	private List<ChildDto> children	;
 
-	public List<ChildDto> getChildDtos() {
-		return childDtos;
+	
+
+	public List<ChildDto> getChildren() {
+		return children;
 	}
 
-	public void setChildDtos(List<ChildDto> childDtos) {
-		this.childDtos = childDtos;
+	public void setChildren(List<ChildDto> children) {
+		this.children = children;
 	}
 
 	public int getId() {

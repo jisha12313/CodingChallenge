@@ -29,7 +29,14 @@ public class ParentDataServiceImpl implements ParentDetailsService {
 
 	@Override
 	public ParentDataDto saveParentData(ParentDataDto parentDataDto) {
-		Parent parent = parentDetailsRepository.save(mapper.map(parentDataDto, Parent.class));
+		Parent parent = null;
+		if (parentDataDto.getId() > 0) {
+			if (parentDetailsRepository.findById(parentDataDto.getId()) != null) {
+				throw new ParentDetailsNotFoundException("Parent Already Exists !!! ");
+			}
+		} else {
+			parent = parentDetailsRepository.save(mapper.map(parentDataDto, Parent.class));
+		}
 		return mapper.map(parent, ParentDataDto.class);
 	}
 

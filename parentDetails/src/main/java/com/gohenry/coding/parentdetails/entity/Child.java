@@ -6,12 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Entity
 @Table(name = "CHILD")
 public class Child {
-	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "CHILD_ID", unique = true, nullable = false)
 	private int id;
 
@@ -88,5 +89,23 @@ public class Child {
 	public void setSecondName(String secondName) {
 		this.secondName = secondName;
 	}
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Child) {
+			Child child = (Child) obj;
+			if (this.getId() > 0 && this.getId() == (child.getId())) {
+				return true;
+			} else if(this == obj) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return this.id;
+	}
+
 }

@@ -2,9 +2,9 @@ package com.gohenry.coding.parentdetails.entity;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public class Parent {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "PARENT_ID", unique = true, nullable = false)
 	private int id;
 
@@ -41,10 +41,20 @@ public class Parent {
 
 	@Column(name = "SECOND_NAME")
 	private String secondName;
+
+	@OneToMany(
+			cascade = { CascadeType.ALL, CascadeType.PERSIST, CascadeType.MERGE })
+	@JoinColumn (name="PARENT_ID",  insertable = true, updatable = true)
 	
-	@OneToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name = "CHILD_ID")
-	private Set<Child> childDetails;
+	private Set<Child> children;
+
+	public Set<Child> getChildren() {
+		return children;
+	}
+
+	public void setChildren(Set<Child> children) {
+		this.children = children;
+	}
 
 	public int getId() {
 		return id;
@@ -109,7 +119,5 @@ public class Parent {
 	public void setSecondName(String secondName) {
 		this.secondName = secondName;
 	}
-	
-	
 
 }
