@@ -105,7 +105,7 @@ Output :
     "title": "Mrs",
     "firstName": "Jane",
     "lastName": "Doe",
-    "emailAddress": "jane.doe@gohenry.co.uk",
+    "emailAddress": "jane.xxx@xxx.com",
     "dateOfBirth": "1990-06-03",
     "gender": "female",
     "secondName": "",
@@ -114,7 +114,7 @@ Output :
             "id": 1,
             "firstName": "Janet",
             "lastName": "Doe",
-            "emailAddress": "janet.doe@gohenry.co.uk",
+            "emailAddress": "janet.xxx@xxx.com",
             "dateOfBirth": "2010-05-22",
             "gender": "female",
             "secondName": ""
@@ -123,7 +123,7 @@ Output :
             "id": 2,
             "firstName": "Jason",
             "lastName": "Doe",
-            "emailAddress": "jason.doe@gohenry.co.uk",
+            "emailAddress": "jason.xxx@xxx.com",
             "dateOfBirth": "2008-12-05",
             "gender": "male",
             "secondName": ""
@@ -142,7 +142,7 @@ OutPut :
     "title": "Mrs",
     "firstName": "Jane",
     "lastName": "Doe",
-    "emailAddress": "jane.doe@gohenry.co.uk",
+    "emailAddress": "jane.xxx@xxx.com",
     "dateOfBirth": "1990-06-03",
     "gender": "female",
     "secondName": "",
@@ -151,7 +151,7 @@ OutPut :
             "id": 1,
             "firstName": "Janet",
             "lastName": "Doe",
-            "emailAddress": "janet.doe@gohenry.co.uk",
+            "emailAddress": "janet.xxx@xxx.com",
             "dateOfBirth": "2010-05-22",
             "gender": "female",
             "secondName": ""
@@ -160,7 +160,7 @@ OutPut :
             "id": 2,
             "firstName": "Jason",
             "lastName": "Doe",
-            "emailAddress": "jason.doe@gohenry.co.uk",
+            "emailAddress": "jason.xxx@xxx.com",
             "dateOfBirth": "2008-12-05",
             "gender": "male",
             "secondName": ""
